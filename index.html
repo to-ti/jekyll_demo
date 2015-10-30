@@ -1,0 +1,12 @@
+--
+layout: default
+title：慎独的blog
+--
+
+<h2>{{page.title}}</h2>
+<p>latest word</p>
+<ur>
+    {% for post in site.posts %}
+        <li>{{post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ur>
